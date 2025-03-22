@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+/*La unidad rem depende del font-size del elemento root (que es la etiqueta html). Aquí se estableció que el font-size fuera de 10px para hacer los cálculos más fáciles para convertir a rem. Se recomienda convertir todos los px a rem; para hacerlo: 
+cantidad de pixeles a convertir / pixeles especificados en html = cantidad de rem
+*/
+/* 
+  Se espera que los usuarios tengan el tamaño default de fuente en el navegador, que es 16px. Para obtener este porcentaje, lo que se hizo fue:
+  tamaño de fuente que se desea / tamaño de fuente default = Porcentaje a utilizar.
+*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
