@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 *,
 *::after,
 *::before {
@@ -15,8 +17,26 @@ cantidad de pixeles a convertir / pixeles especificados en html = cantidad de re
 */
 html {
   font-size: 62.5%; //Define lo que es 1rem
+
+  //EL ORDEN DEBE SER DE MAYOR A MENOR, CUANDO SE USA MAX-WIDTH
+  @include mixins.respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px, 9/16
+  }
+
+  @include mixins.respond(tab-port) {
+    font-size: 50%; //1rem = 8px, 8/16
+  }
+
+  @include mixins.respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include mixins.respond(tab-port) {
+    padding: 0; //1rem = 8px, 8/16
+  }
 }
