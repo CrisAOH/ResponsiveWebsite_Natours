@@ -3,7 +3,6 @@
 
 .row {
   max-width: variables.$grid-width;
-  background-color: #eee;
   margin: 0 auto; //Centra un block element dentro de otro block element.
   margin-bottom: variables.$gutter-vertical;
 
@@ -15,7 +14,6 @@
 
   //   Selecciona los elementos cuyo atributo class empiece (^) con col-
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
